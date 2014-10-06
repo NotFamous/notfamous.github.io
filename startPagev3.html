@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!-- This is an HTML comment -->
+<html>
+	<head>
+		<!-- I know there are other things to put in here... -->
+		<title>Start Page.</title>
+		<link rel="shortcut icon" href="biohazard.bmp" type="image/x-icon">
+		<?php
+			if(!isset($_POST["loginName"])){
+				$loginName = "nope";
+			}
+			if(!isset($_POST["loginPass"])){
+				$loginPass = "wrongagain";
+			}
+			print ""+$loginName;
+		?>
+		<script type="text/javascript">
+			//alert("Warning 1:Beginning of Javascript.");
+			var x = 1;
+			var y = 2;
+			var z = x + y;
+			//alert("Warning 2: Initialized Variables");
+			function closelogin()
+			{
+				document.getElementById("login").style.visibility = 'hidden';
+			}
+			function openLogin()
+			{
+				document.getElementById("login").style.visibility = 'visible';
+			}
+			
+			function changeLogin()
+			{
+				if(document.getElementById("login").style.visibility)
+				{
+					openLogin();
+				}else if($['#login'].is(':visible'))
+				{
+					closeLogin();
+				}
+			}
+			//alert("Warning 3");
+			function displayDate()
+			{
+				document.getElementById("date").innerHTML=Date();
+				//alert("Warning 3.1");
+			}
+			//alert("Warning 4: End of Javascript");
+		</script>
+		<style type="text/css">
+		/* this is a css comment */
+			body
+			{
+				background-color:black;
+				background-image:url('backgroundImage1.jpg');
+				color:red;
+			}
+			#mainTitle
+			{
+				font-family:"Times New Roman";
+				text-align:center;
+			}
+			/*---- CROSS BROWSER DROPDOWN MENU ----*/
+			ul#rightList {margin: 0 0 0 0;}
+			ul.drop a, ul.drop visited { display:block; color: #FFF; font-family: Verdana; font-size: 14px;text-align:center;text-transform:uppercase;font-weight:bold;text-decoration: none;}
+			ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; border: 0px solid #fff; background-color:rgba(100,0,0,0.2);/*background: #000;*/ color: #fff;}
+			ul.drop { position: relative; z-index: 597; float: left;}
+			ul.drop li { /*float: left;*/ line-height: 1.3em; vertical-align: middle; zoom: 1; padding: 5px 10px; }
+			ul.drop li.hover, ul.drop li:hover {position: relative; z-index: 599; cursor: default; background: #1e7c9a; }
+			ul.drop ul { visibility: hidden; position: absolute; top: -1%; right:-107%; /*left:5*/ ; z-index: 598; width: 145px; background-color:rgba(055,0,0,0.15); /*background:#f00;*/ border: 1px solid #00f; }
+			ul.drop ul li { float: none; }
+			ul.drop ul ul { top: -2px; left: 100%; }
+			ul.drop li:hover > ul { visibility: visible }
+			/*---- END OF THE DROPDOWN MENU! ----*/
+			#login
+			{
+				visibility:hidden;
+				position:fixed;
+				float:center;
+				height:100%;
+				width:100%;
+				top:0px;
+				left:0px;
+				background-color:white;
+			}
+			#loginForm
+			{
+				position:absolute;
+				float:center;
+				margin:25% 25%;
+			}
+			#idkStuff
+			{
+				visibility:hidden;
+				border:2px solid red;
+				position:fixed;
+				/* margin: top right bottom left; */
+				margin: 100px 100px 100px 100px;
+			}
+			#pictures
+			{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<?php
+			
+		?>
+		<!-- Start the body of the web page. -->
+		<h1 id="mainTitle">Welcome to the main menu.</h1>
+		<form id="mainTitle" method="get" action="https://www.google.com/search" target="_blank">
+			<input type="text" name="q" size="31" value="">
+			<input type="button" name="googleButton" value="Google" onclick="goToGoog()">
+		</form>
+		<div id="date" onclick="displayDate()">
+			Click this to display date & time.
+		</div>
+		<div onclick="openLogin()">
+			Click this to open the login.
+		</div>
+		<div id="login">
+			<form id="loginForm">
+				Username: <input type="text" name="loginName"><br />
+				Password: <input type="password" name="loginPass"><br />
+				<input type="submit" value="Login" >
+				<input type="submit" value="Admin" onclick="changeLogin()">
+			</form>
+		</div>
+		<hr />
+		<div class="sidebar1">
+		<!-- Beginning of side menu bar. -->
+		<ul id="rightList" class="drop">
+			<li><a href="#">Social</a><!-- Beginning of Social -->
+			<ul>
+				<li><a href="http://www.reddit.com/" target="_blank">Reddit</a></li>
+				<li><a href="https://www.facebook.com/?SK=H_CHR" target="_blank">FaceBook</a></li>
+				<li><a href="http://www.tumblr.com" target="_blank">Tumblr</a></li>
+			</ul></li><!-- End of Social -->
+			<li><a href="#">Blogs</a><!-- Beginning of Blogs -->
+			<ul>
+				<li><a href="http://www.tumblr.com" target="_blank">Tumblr</a></li>
+			</ul></li><!-- End of Blogs -->
+			<li><a href="#">Videos</a><!-- Beginning of videos -->
+			<ul>
+				<li><a href="https://www.youtube.com/feed/subscriptions/u" target="_blank">YouTube</a></li>
+				<li><a href="http://www.twitch.tv" target="_blank">TwitchTV</a></li>
+			</ul></li><!-- End of Videos -->
+			<li><a href="#">School</a><!-- Beginning of School -->
+			<ul>
+				<!-- Portland Community College Link -->
+				<li><a href="http://www.pcc.edu" target="_blank">PCC</a></li>
+				<!-- Portland Community College Student Link -->
+				<li><a href="https://my.pcc.edu" target="_blank">MyPCC</a></li>
+				<!-- Portland State University -->
+				<li><a href="http://www.pdx.edu/" target="_blank">PSU</a></li>
+				<!-- Portland Community College Plus Steam -->
+				<li><a href="https://www.steam.com/" target="_blank">+STEAM</a></li>
+				<!-- Modesto Junior College Link -->
+				<li><a href="http://mjc.edu" target="_blank">MJC</a></li>
+				<!-- Modesto Junior College Student Link -->
+				<li><a href="https://piratesnet.mjc.edu/" target="_blank">PiratesNet</a></li>
+				<!-- University of Portland Link -->
+				<li><a href="http://www.up.edu" target="_blank">UoPortland</a></li>
+				<!-- Free Application for Federal Student Aid Link -->
+				<li><a href="http://www.fafsa.ed.gov/" target="_blank">FAFSA</a></li>
+				<!-- Student Aid Link -->
+				<li><a href="http://www.studentaid.ed.gov/" target="_blank">Student Aid</a></li>
+			</ul></li><!-- End of School -->
+			<li><a href="#">Finances</a><!-- Beginning of Finances -->
+			<ul>
+				<!-- My Pay Card from MJM -->
+				<li><a href="https://www.visaprepaidprocessing.com/ADP/PayRoll/Pages/Home.aspx" target="_blank">PayCard</a></li>
+				<!-- MyYCCD Card -->
+				<li><a href="https://myyccdcard.higheroneaccount.com/" target="_blank">MyYCCD</a></li>
+				<!-- PayPal -->
+				<li><a href="https://www.paypal.com/" target="_blank">PayPal</a></li>
+			</ul></li><!-- End of Finances -->
+			<li><a href="#">E-Mail</a><!-- Beginning of E-Mail -->
+			<ul>
+				<li><a href="https://login.live.com/" target="_blank">Live</a></li>
+				<li><a href="https://mail.google.com/mail/" target="_blank">PCC</a></li>
+				<li><a href="https://portal.microsoftonline.com/default.aspx" target="_blank">MJC</a></li>
+			</ul></li><!-- End of E-mail -->
+			<li><a href="#">News</a><!-- Beginning of News -->
+			<ul>
+				<li><a href="https://news.google.com" target="_blank">Google News</a></li>
+				<li><a href="http://www.modbee.com/local-news/" target="_blank">ModBee</a></li>
+				<li><a href="http://www.kcra.com" target="_blank">KCRA</a></li>
+				<li><a href="http://www.foxnews.com" target="_blank">Fox News</a></li>
+				<li><a href="http://news.yahoo.com" target="_blank">Yahoo News</a></li>
+				<li><a href="http://www.cnn.com" target="_blank"CNN</a></li>
+				<li><a href="http://www.nbcnews.com/" target="_blank">NBC News</a></li>
+				<li><a href="http://abcnews.go.com/news" target="_blank">ABC News</a></li>
+			</ul></li><!-- End of News -->
+			<li><a href="#">Fitness</a><!-- Beginning of Fitness -->
+			<ul>
+				<li><a href="http://www.myfitnesspal.com" target="_blank">MFP</a></li>
+				<li><a href="http://www.fitocracy.com" target="_blank">Fitocracy</a></li>
+				<li><a href="http://www.military.com/military-fitness/" target="_blank">Military Fit</a></li>
+			</ul></li><!-- End of Fitness -->
+			
+			<li><a href="#">Development</a><!-- Beginning of development -->
+			<ul>
+				<li><a href="#">Web</a>
+				<ul>
+					<li><a href="http://www.w3schools.com" target="_blank">W3 Schools</a></li>
+				</ul></li>
+				<li><a href="#">Game</a>
+				<ul><li><a href="http://www.unity3d.com" target="_blank">Unity3d</a></li>
+					<li><a href="http://www.blender.com" target="_blank">Blender</a></li>
+				</ul></li>
+				<li><a href="#">Programming</a>
+				<ul>
+				<li><a href="http://docs.oracle.com/javase/7/docs/api/" target="_blank">Java</a></li>
+				<li><a href="http://koding.com" target="_blank">Koding</a></li>
+				<li><a href="http://www.udacity.com" target="_blank">Udacity</a></li>
+				<li><a href="http://www.codecademy.com" target="_blank">Codecademy</a></li>
+				<li><a href="http://www.edx.org" target="_blank">Edx</a></li>
+				<li><a href="http://www.eclipse.com" target="_blank">Eclipse</a></li>
+				</ul></li>
+			</ul></li><!-- End of Development -->
+			<li><a href="#">Buy Stuff</a><!-- Beginning of Buy stuff -->
+			<ul>
+				<li><a href="http://modesto.craigslist.org/" target="_blank">Craigslist</a></li>
+				<li><a href="https://www.eBay.com/" target="_blank">eBay</a></li>
+				<li><a href="#">idk This</a></li>
+			</ul></li><!-- End of Buy Stuff -->
+			<li><a href="#">Job</a></li><!-- Beginning of Job -->
+			<ul>
+				<li><a href="http://www.indeed.com" target="_blank">Indeed</a></li>
+			</ul></li><!-- End of Job -->
+			<li><a href="#">Motorcycle</a>
+			<ul>
+				<li><a href="http://modesto.craigslist.org/mcy/" target="_blank">CL MC</a></li>
+				<li><a href="http://www.ebay.com/motors/motorcycles" target="_blank">eBay MC</a></li>
+				<li><a href="http://www.motovlog.com/" target="_blank">Motovlog.com</a></li>
+				<li><a href="http://www.dansmc.com/mc_repaircourse.htm" target="_blank">Dans MC</a></li>
+				<li><a href="http://www.motosport.com/" target="_blank">MC Parts</a></li>
+				<li><a href="http://www.clarity.net/~adam/buying-bike.html" target="_blank">MC Buy Guide</a></li>
+				<li><a href="#" target="_blank"></a></li>
+			</ul></li>
+			<li><a href="#">Resume</a><!-- Beginning of Resume -->
+			<ul>
+				<li><a href="file:///D:/BackUp/mffsp/programmingResume.html" target="_blank">Programming</a></li>
+				<li><a href="file:///D:/BackUp/mffsp/UnityResume.html" target="_blank">Unity</a></li>
+				<li><a href="file:///D:/BackUp/mffsp/blenderResume.html" target="_blank">Blender</a></li>
+				<li><a href="file:///D:/BackUp/mffsp/flstudioResume.html" target="_blank">FL Studio</a></li>
+			</ul></li><!-- End of Resume -->
+			<li><a href="#">Timer<a><!-- Beginning of Timers -->
+			<ul>
+				<li><a href="file:///D:/BackUp/mffsp/timers.html" target="_blank">Timers</a></li>
+			</ul></li>
+			
+			
+			<!-- <li><a href="#">Web Development</a></li> -->
+		</ul>
+		<!-- End of Side menu bar -->
+		</div>
+		<div id="idkStuff">
+			<p>
+		</div>
+		<div id="pictures" style="visibility:hidden;">
+		<a href="https://www.google.com" target="_blank">
+			<img src="google.jpg" alt="Go to Google" height="200">
+		</a>
+		<a href="https://www.facebook.com"target="_blank">
+			<img src="facebook.jpg" alt="Go to Facebook" height="200">
+		</a>
+		<a href="https://www.youtube.com/feed/subscriptions/u" target="_blank">
+			<img src="youtube.png" alt="Go toYouTube" height="200">
+		</a>
+		<a href="http://modesto.craigslist.org/" target="_blank">
+			<img src="craigslist.png" alt="Go to Craigslist" height="200">
+		</a>
+		<a href="http://www.indeed.com" target="_blank">
+			<img src="indeed.jpg" alt="Go to Indeed" height="200">
+		</a>
+		</div>
+		
+		
+		<?php
+		
+		?>
+		<!-- 
+			 w3schools.com
+			 <img src="w3schools.jpg">
+		  -->
+		<!-- End of the web page -->
+	</body>
+</html>
